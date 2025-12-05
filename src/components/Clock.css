@@ -1,0 +1,27 @@
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.clock h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #4B9CD3;
+}
+
+.time-display {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: system-ui;
+  color: var(--text-color);
+}
+
+.date-display {
+  font-size: 1.5rem;
+  color: #888;
+  opacity: 0.6;
+}
