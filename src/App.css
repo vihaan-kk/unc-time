@@ -4,3 +4,41 @@
   padding: 2rem;
   text-align: center;
 }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.toggle-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #4b9cd3;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.toggle-btn:hover {
+  background-color: #3a7ca8;
+}
+
+.schedule-section {
+  width: 100%;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
