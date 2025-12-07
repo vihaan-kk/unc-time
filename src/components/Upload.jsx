@@ -1,8 +1,7 @@
 import { useRef, useState } from "react";
 import * as pdfjsLib from 'pdfjs-dist';
+import './Upload.css';
 
-// Set up the worker for PDF.js
-// We need to use the worker from the installed package
 import pdfWorker from 'pdfjs-dist/build/pdf.worker.mjs?url';
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
@@ -132,8 +131,12 @@ export default function Upload({ onScheduleParsed }) {
         ref={fileRef} 
         onChange={handleFileUpload}
         disabled={loading}
+        style={{ display: 'none' }}
+        id="file-upload"
       />
-      {loading && <p>Parsing PDF...</p>}
+      <label htmlFor="file-upload" className="custom-file-upload">
+        {loading ? 'Parsing...' : 'Choose PDF File'}
+      </label>
       {error && <p className="error" style={{color: 'red'}}>{error}</p>}
     </div>
   );

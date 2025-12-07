@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './Countdowns.css';
 
 export default function Countdowns({ events }) {
   const [now, setNow] = useState(new Date());

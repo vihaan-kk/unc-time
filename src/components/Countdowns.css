@@ -1,0 +1,27 @@
+.countdowns h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #4b9cd3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.countdown-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.countdown-item strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-color);
+}
+
+.countdown-item div {
+  color: #888;
+  font-size: 0.85rem;
+}

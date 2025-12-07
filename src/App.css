@@ -13,32 +13,59 @@
 }
 
 .toggle-btn {
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  background-color: #4b9cd3;
-  color: white;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.25s;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.toggle-btn img {
+  width: 30px;
+  height: 30px;
 }
 
 .toggle-btn:hover {
-  background-color: #3a7ca8;
+  transform: scale(1.2);
 }
+
+.toggle-btn:active {
+  transform: scale(0.9);
+}
+
 
 .schedule-section {
-  width: 100%;
-  animation: fadeIn 0.3s ease-in;
+  position: fixed;
+  top: 5rem;
+  left: 2rem;
+  width: 300px;
+  max-height: 80%;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+  text-align: left;
 }
 
-@keyframes fadeIn {
+.darkmode .schedule-section {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }

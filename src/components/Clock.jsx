@@ -59,9 +59,8 @@ function Clock({ events = [] }) {
     if (currentClass) {
       const endMinutes = parseTime(currentClass.endTime)
       const diffMinutes = endMinutes - currentMinutes
-      const diffSeconds = (endMinutes * 60) - (Math.floor(now.getTime() / 1000) % (24 * 3600)) // Rough approximation for seconds
+      const diffSeconds = (endMinutes * 60) - (Math.floor(now.getTime() / 1000) % (24 * 3600))
       
-      // More precise countdown
       const endTime = new Date(now)
       const [endH, endM] = currentClass.endTime.split(/(?=[ap]m)/i)[0].split(':').map(Number)
       const isPM = currentClass.endTime.toLowerCase().includes('pm')
@@ -138,8 +137,8 @@ function Clock({ events = [] }) {
 
   return (
     <div className={`clock ${status.type}`}>
-      <h1>{status.type === 'class' ? 'Class Ends In' : (status.message === 'No upcoming classes' ? 'Free Time' : 'Next Class In')}</h1>
-      <div className="time-display" style={{ fontSize: status.message.length > 10 ? '3rem' : '5rem' }}>
+      <h1>{events.length === 0 ? 'The University of North Carolina at Chapel Hill' : (status.type === 'class' ? 'Class Ends In' : (status.message === 'No upcoming classes' ? 'Free Time' : 'Next Class In'))}</h1>
+      <div className="time-display" style={{ fontSize: status.message.length > 15 ? '3rem' : '5rem' }}>
         {status.message}
       </div>
       <div className="date-display">
