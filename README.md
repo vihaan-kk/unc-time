@@ -1,16 +1,66 @@
-# React + Vite
+# UNC Chapel Hill Time
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A smart class schedule and countdown application designed for University of North Carolina at Chapel Hill students. This React application parses your official ConnectCarolina PDF schedule and transforms it into a dynamic "Smart Clock" that keeps you on track.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Smart Countdown Timer**:
+  - **"Class Ends In..."**: When you are currently in a class, see exactly how much time is left.
+  - **"Next Class In..."**: During breaks, see a countdown to your next upcoming class.
+  - **"Free Time"**: Know when you are done for the day or have no immediate classes.
+- **PDF Schedule Parsing**: Directly upload your schedule PDF exported from ConnectCarolina. The app automatically extracts class names, times, and days.
+- **Privacy Focused**: All PDF parsing happens locally in your browser. Your schedule data never leaves your device.
+- **Dark Mode**: Toggle between light and dark themes for comfortable viewing day or night.
+- **Schedule View**: Toggle a sidebar to view your full list of parsed classes.
 
-## React Compiler
+## How to Use
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Export your Schedule**:
+   - Log in to ConnectCarolina.
+   - Go to your Student Center -> My Class Schedule.
+   - Save/Print the page as a **PDF**.
+2. **Upload**:
+   - Click "Choose PDF File" in the app.
+   - Select your saved schedule PDF.
+3. **Track**:
+   - The clock will immediately update to show your current status.
 
-## Expanding the ESLint configuration
+## Development Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is built with [React](https://react.dev/) and [Vite](https://vitejs.dev/).
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/vihaan-kk/unc-time.git
+   cd unc-time
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Technologies Used
+
+- **React**: UI Library
+- **Vite**: Build tool and development server
+- **pdfjs-dist**: For client-side PDF text extraction
+- **CSS Modules & Variables**: For styling and theming
+
+## License
+
+[MIT](LICENSE)

@@ -2,6 +2,7 @@
   "name": "unc-time",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "node node_modules/vite/bin/vite.js",
